@@ -8,14 +8,14 @@ final List<Products> shirts_provider = [
   Products(name: "CLASSIC", price: 800, images: "assets/images/img_6.png"),
   Products(name: "DENIM", price: 3000, images: "assets/images/img_7.png"),
 ];
-final Jeans_provider =[
+final List<Products> Jeans_provider =[
   Products(name: "TRACK", price: 1500,  images: "assets/images/img_10.png"),
   Products(name: "DENIM", price:  2000, images: "assets/images/img_11.png"),
   Products(name: "CASUALS", price: 100, images: "assets/images/img_12.png"),
   Products(name: "CLASSIC", price: 800, images: "assets/images/img_13.png"),
   Products(name: "SHOW", price:  3000,images: "assets/images/img_14.png"),
 ];
-final T_shirt_prvider =[
+final List<Products> T_shirt_prvider =[
 Products(name: "Full Sleeve", price: 1500, images: "assets/images/img_15.png"),
 Products(name: "Hoddies", price: 2000, images: "assets/images/img_16.png"),
 Products(name: "Half sleev", price: 1000, images: "assets/images/img_17.png"),
@@ -23,7 +23,7 @@ Products(name: "Casuals", price: 800, images: "assets/images/img_18.png"),
 Products(name: "Baniyans", price: 3000, images: "assets/images/img_19.png"),
 ];
 
-class Cart_provider with ChangeNotifier{
+class  Cart_provider with ChangeNotifier{
 
   final List<Products> _shirts = shirts_provider;
   List<Products> get shirts => _shirts;

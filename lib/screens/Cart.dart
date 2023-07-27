@@ -12,11 +12,8 @@ class Cart extends StatelessWidget {
 
     var cartProducts = context.watch<Cart_provider>().cart;
     num totalamount = 0;
-    num data = 0;
     for (var item in cartProducts) {
-      if(data > 0) {
-        totalamount += ((item.price * data) * item.count);
-      }
+        totalamount += (item.price  * item.count);
     }
 
     return Scaffold(
@@ -73,30 +70,10 @@ class Cart extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Wrap(
-                        children: [
-                          Wrap(
-                            children: [
-                              // ElevatedButton(
-                              //   onPressed: () {
-                              //     var quantity = 0;
-                              //     if(cartProducts)
-                              //
-                              //   },
-                              //   child: Icon(Icons.add),
-                              // ),
-                              Text("data"),
-                              CircleAvatar(
-                                child: Icon(Icons.remove),
-                              ),
-                            ],
-                          ),
-                          SizedBox(width: 5,),
-                          IconButton(onPressed: (){
-                            context.read<Cart_provider>().removefromCart(item);
-                          }, icon: Icon(Icons.delete,size: 30,),),
-                        ],
-                      )
+                      SizedBox(width: 5,),
+                      IconButton(onPressed: (){
+                        context.read<Cart_provider>().removefromCart(item);
+                      }, icon: Icon(Icons.delete,size: 30,),)
                     ],
                   ),
                 );
